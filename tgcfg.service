@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.tarrget
+
+[Service]
+User=serega
+Group=serega
+
+WorkingDirectory=/home/serega/tgmusicbot/
+Environment="PYTHONPATH=/home/serega/tgmusicbot"
+ExecStart=/home/serega/tgmusicbot/.venv/bin/python  /home/serega/tgmusicbot/bot.py
+
+[Install]
+WantedBy=multi-user.target
